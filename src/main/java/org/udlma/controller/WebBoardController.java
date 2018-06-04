@@ -122,7 +122,13 @@ public class WebBoardController {
 	    log.info(""+ page);
 	    log.info(""+result);
 	    
-	    model.addAttribute("result", result);
+	    //model.addAttribute("result", result);
+	    
+	    log.info("TOTAL PAGE NUMBER: " + result.getTotalPages());
+	    
+	    
+	    model.addAttribute("result", new PageMaker(result));
+
 	        
 	  }
 
